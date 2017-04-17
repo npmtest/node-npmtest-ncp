@@ -1,7 +1,7 @@
 # test coverage for  [ncp (v2.0.0)](https://github.com/AvianFlu/ncp)  [![npm package](https://img.shields.io/npm/v/npmtest-ncp.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-ncp) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-ncp.svg)](https://travis-ci.org/npmtest/node-npmtest-ncp)
 #### Asynchronous recursive file copy utility.
 
-[![NPM](https://nodei.co/npm/ncp.png?downloads=true)](https://www.npmjs.com/package/ncp)
+[![NPM](https://nodei.co/npm/ncp.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ncp)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-ncp/tree/alpha)|
 |--:|:--|
@@ -9,11 +9,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-ncp/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-ncp/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-ncp/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-ncp/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-ncp/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-ncp/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-ncp/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-ncp/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-ncp/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-ncp%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-ncp/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-ncp/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-ncp/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-ncp/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-ncp%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ncp/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-ncp/build/test-report.html](https://npmtest.github.io/node-npmtest-ncp/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-ncp/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-ncp/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-ncp/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-ncp/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-ncp/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-ncp/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-ncp/build/screenCapture.npmPackageListing.svg)
 
@@ -27,8 +33,7 @@
 
 {
     "author": {
-        "name": "AvianFlu",
-        "email": "charlie@charlieistheman.com"
+        "name": "AvianFlu"
     },
     "bin": {
         "ncp": "./bin/ncp"
@@ -61,17 +66,14 @@
     "main": "./lib/ncp.js",
     "maintainers": [
         {
-            "name": "avianflu",
-            "email": "charlie@charlieistheman.com"
+            "name": "avianflu"
         },
         {
-            "name": "mmalecki",
-            "email": "me@mmalecki.com"
+            "name": "mmalecki"
         }
     ],
     "name": "ncp",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/AvianFlu/ncp.git"
