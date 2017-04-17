@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-ncp/ncp/lib/ncp.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-ncp/node_modules/ncp/lib/ncp.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-ncp">npmtest-ncp (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-ncp/ncp/lib/ncp.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-ncp/node_modules/ncp/lib/ncp.js</span></h1>
     <h2>
         
         Statements: <span class="metric">12.41% <small>(18 / 145)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-ncp/ncp/lib/</a> &#187; ncp.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-ncp/node_modules/ncp/lib/</a> » ncp.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -744,15 +742,15 @@
 module.exports = ncp;
 ncp.ncp = ncp;
 &nbsp;
-<span class="fstat-no" title="function not covered" >function ncp (source, dest, options, callback) {</span>
-<span class="cstat-no" title="statement not covered" >  var cback = callback;</span>
+<span class="fstat-no" title="function not covered">function ncp (source, dest, options, callback) {</span>
+<span class="cstat-no" title="statement not covered">  var cback = callback;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!callback) {</span>
-<span class="cstat-no" title="statement not covered" >    cback = options;</span>
-<span class="cstat-no" title="statement not covered" >    options = {};</span>
+<span class="cstat-no" title="statement not covered">  if (!callback) {</span>
+<span class="cstat-no" title="statement not covered">    cback = options;</span>
+<span class="cstat-no" title="statement not covered">    options = {};</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  var basePath = process.cwd(),</span>
+<span class="cstat-no" title="statement not covered">  var basePath = process.cwd(),</span>
       currentPath = path.resolve(basePath, source),
       targetPath = path.resolve(basePath, dest),
       filter = options.filter,
@@ -767,232 +765,232 @@ ncp.ncp = ncp;
       running = 0,
       limit = options.limit || ncp.limit || 16;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  limit = (limit &lt; 1) ? 1 : (limit &gt; 512) ? 512 : limit;</span>
+<span class="cstat-no" title="statement not covered">  limit = (limit &lt; 1) ? 1 : (limit &gt; 512) ? 512 : limit;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  startCopy(currentPath);</span>
+<span class="cstat-no" title="statement not covered">  startCopy(currentPath);</span>
   
-<span class="fstat-no" title="function not covered" >  function startCopy(source) {</span>
-<span class="cstat-no" title="statement not covered" >    started++;</span>
-<span class="cstat-no" title="statement not covered" >    if (filter) {</span>
-<span class="cstat-no" title="statement not covered" >      if (filter instanceof RegExp) {</span>
-<span class="cstat-no" title="statement not covered" >        if (!filter.test(source)) {</span>
-<span class="cstat-no" title="statement not covered" >          return cb(true);</span>
+<span class="fstat-no" title="function not covered">  function startCopy(source) {</span>
+<span class="cstat-no" title="statement not covered">    started++;</span>
+<span class="cstat-no" title="statement not covered">    if (filter) {</span>
+<span class="cstat-no" title="statement not covered">      if (filter instanceof RegExp) {</span>
+<span class="cstat-no" title="statement not covered">        if (!filter.test(source)) {</span>
+<span class="cstat-no" title="statement not covered">          return cb(true);</span>
         }
       }
-      else <span class="cstat-no" title="statement not covered" >if (typeof filter === 'function') {</span>
-<span class="cstat-no" title="statement not covered" >        if (!filter(source)) {</span>
-<span class="cstat-no" title="statement not covered" >          return cb(true);</span>
+      else <span class="cstat-no" title="statement not covered">if (typeof filter === 'function') {</span>
+<span class="cstat-no" title="statement not covered">        if (!filter(source)) {</span>
+<span class="cstat-no" title="statement not covered">          return cb(true);</span>
         }
       }
     }
-<span class="cstat-no" title="statement not covered" >    return getStats(source);</span>
+<span class="cstat-no" title="statement not covered">    return getStats(source);</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function getStats(source) {</span>
-<span class="cstat-no" title="statement not covered" >    var stat = dereference ? fs.stat : fs.lstat;</span>
-<span class="cstat-no" title="statement not covered" >    if (running &gt;= limit) {</span>
-<span class="cstat-no" title="statement not covered" >      return setImmediate(<span class="fstat-no" title="function not covered" >function () {</span></span>
-<span class="cstat-no" title="statement not covered" >        getStats(source);</span>
+<span class="fstat-no" title="function not covered">  function getStats(source) {</span>
+<span class="cstat-no" title="statement not covered">    var stat = dereference ? fs.stat : fs.lstat;</span>
+<span class="cstat-no" title="statement not covered">    if (running &gt;= limit) {</span>
+<span class="cstat-no" title="statement not covered">      return setImmediate(<span class="fstat-no" title="function not covered">function () {</span></span>
+<span class="cstat-no" title="statement not covered">        getStats(source);</span>
       });
     }
-<span class="cstat-no" title="statement not covered" >    running++;</span>
-<span class="cstat-no" title="statement not covered" >    stat(source, <span class="fstat-no" title="function not covered" >function (err, stats) {</span></span>
-<span class="cstat-no" title="statement not covered" >      var item = {};</span>
-<span class="cstat-no" title="statement not covered" >      if (err) {</span>
-<span class="cstat-no" title="statement not covered" >        return onError(err);</span>
+<span class="cstat-no" title="statement not covered">    running++;</span>
+<span class="cstat-no" title="statement not covered">    stat(source, <span class="fstat-no" title="function not covered">function (err, stats) {</span></span>
+<span class="cstat-no" title="statement not covered">      var item = {};</span>
+<span class="cstat-no" title="statement not covered">      if (err) {</span>
+<span class="cstat-no" title="statement not covered">        return onError(err);</span>
       }
 &nbsp;
       // We need to get the mode from the stats object and preserve it.
-<span class="cstat-no" title="statement not covered" >      item.name = source;</span>
-<span class="cstat-no" title="statement not covered" >      item.mode = stats.mode;</span>
-<span class="cstat-no" title="statement not covered" >      item.mtime = stats.mtime; </span>//modified time
-<span class="cstat-no" title="statement not covered" >      item.atime = stats.atime; </span>//access time
+<span class="cstat-no" title="statement not covered">      item.name = source;</span>
+<span class="cstat-no" title="statement not covered">      item.mode = stats.mode;</span>
+<span class="cstat-no" title="statement not covered">      item.mtime = stats.mtime; </span>//modified time
+<span class="cstat-no" title="statement not covered">      item.atime = stats.atime; </span>//access time
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (stats.isDirectory()) {</span>
-<span class="cstat-no" title="statement not covered" >        return onDir(item);</span>
+<span class="cstat-no" title="statement not covered">      if (stats.isDirectory()) {</span>
+<span class="cstat-no" title="statement not covered">        return onDir(item);</span>
       }
-      else <span class="cstat-no" title="statement not covered" >if (stats.isFile()) {</span>
-<span class="cstat-no" title="statement not covered" >        return onFile(item);</span>
+      else <span class="cstat-no" title="statement not covered">if (stats.isFile()) {</span>
+<span class="cstat-no" title="statement not covered">        return onFile(item);</span>
       }
-      else <span class="cstat-no" title="statement not covered" >if (stats.isSymbolicLink()) {</span>
+      else <span class="cstat-no" title="statement not covered">if (stats.isSymbolicLink()) {</span>
         // Symlinks don't really need to know about the mode.
-<span class="cstat-no" title="statement not covered" >        return onLink(source);</span>
+<span class="cstat-no" title="statement not covered">        return onLink(source);</span>
       }
     });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function onFile(file) {</span>
-<span class="cstat-no" title="statement not covered" >    var target = file.name.replace(currentPath, targetPath);</span>
-<span class="cstat-no" title="statement not covered" >    if(rename) {</span>
-<span class="cstat-no" title="statement not covered" >      target =  rename(target);</span>
+<span class="fstat-no" title="function not covered">  function onFile(file) {</span>
+<span class="cstat-no" title="statement not covered">    var target = file.name.replace(currentPath, targetPath);</span>
+<span class="cstat-no" title="statement not covered">    if(rename) {</span>
+<span class="cstat-no" title="statement not covered">      target =  rename(target);</span>
     }
-<span class="cstat-no" title="statement not covered" >    isWritable(target, <span class="fstat-no" title="function not covered" >function (writable) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (writable) {</span>
-<span class="cstat-no" title="statement not covered" >        return copyFile(file, target);</span>
+<span class="cstat-no" title="statement not covered">    isWritable(target, <span class="fstat-no" title="function not covered">function (writable) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (writable) {</span>
+<span class="cstat-no" title="statement not covered">        return copyFile(file, target);</span>
       }
-<span class="cstat-no" title="statement not covered" >      if(clobber) {</span>
-<span class="cstat-no" title="statement not covered" >        rmFile(target, <span class="fstat-no" title="function not covered" >function () {</span></span>
-<span class="cstat-no" title="statement not covered" >          copyFile(file, target);</span>
+<span class="cstat-no" title="statement not covered">      if(clobber) {</span>
+<span class="cstat-no" title="statement not covered">        rmFile(target, <span class="fstat-no" title="function not covered">function () {</span></span>
+<span class="cstat-no" title="statement not covered">          copyFile(file, target);</span>
         });
       }
-<span class="cstat-no" title="statement not covered" >      if (modified) {</span>
-<span class="cstat-no" title="statement not covered" >        var stat = dereference ? fs.stat : fs.lstat;</span>
-<span class="cstat-no" title="statement not covered" >        stat(target, <span class="fstat-no" title="function not covered" >function(err, stats) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (modified) {</span>
+<span class="cstat-no" title="statement not covered">        var stat = dereference ? fs.stat : fs.lstat;</span>
+<span class="cstat-no" title="statement not covered">        stat(target, <span class="fstat-no" title="function not covered">function(err, stats) {</span></span>
             //if souce modified time greater to target modified time copy file
-<span class="cstat-no" title="statement not covered" >            if (file.mtime.getTime()&gt;stats.mtime.getTime())</span>
-<span class="cstat-no" title="statement not covered" >                copyFile(file, target);</span>
-            else <span class="cstat-no" title="statement not covered" >return cb();</span>
+<span class="cstat-no" title="statement not covered">            if (file.mtime.getTime()&gt;stats.mtime.getTime())</span>
+<span class="cstat-no" title="statement not covered">                copyFile(file, target);</span>
+            else <span class="cstat-no" title="statement not covered">return cb();</span>
         });
       }
       else {
-<span class="cstat-no" title="statement not covered" >        return cb();</span>
+<span class="cstat-no" title="statement not covered">        return cb();</span>
       }
     });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function copyFile(file, target) {</span>
-<span class="cstat-no" title="statement not covered" >    var readStream = fs.createReadStream(file.name),</span>
+<span class="fstat-no" title="function not covered">  function copyFile(file, target) {</span>
+<span class="cstat-no" title="statement not covered">    var readStream = fs.createReadStream(file.name),</span>
         writeStream = fs.createWriteStream(target, { mode: file.mode });
     
-<span class="cstat-no" title="statement not covered" >    readStream.on('error', onError);</span>
-<span class="cstat-no" title="statement not covered" >    writeStream.on('error', onError);</span>
+<span class="cstat-no" title="statement not covered">    readStream.on('error', onError);</span>
+<span class="cstat-no" title="statement not covered">    writeStream.on('error', onError);</span>
     
-<span class="cstat-no" title="statement not covered" >    if(transform) {</span>
-<span class="cstat-no" title="statement not covered" >      transform(readStream, writeStream, file);</span>
+<span class="cstat-no" title="statement not covered">    if(transform) {</span>
+<span class="cstat-no" title="statement not covered">      transform(readStream, writeStream, file);</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      writeStream.on('open', <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >        readStream.pipe(writeStream);</span>
+<span class="cstat-no" title="statement not covered">      writeStream.on('open', <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">        readStream.pipe(writeStream);</span>
       });
     }
-<span class="cstat-no" title="statement not covered" >    writeStream.once('finish', <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >        if (modified) {</span>
+<span class="cstat-no" title="statement not covered">    writeStream.once('finish', <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">        if (modified) {</span>
             //target file modified date sync.
-<span class="cstat-no" title="statement not covered" >            fs.utimesSync(target, file.atime, file.mtime);</span>
-<span class="cstat-no" title="statement not covered" >            cb();</span>
+<span class="cstat-no" title="statement not covered">            fs.utimesSync(target, file.atime, file.mtime);</span>
+<span class="cstat-no" title="statement not covered">            cb();</span>
         }
-        else <span class="cstat-no" title="statement not covered" >cb();</span>
+        else <span class="cstat-no" title="statement not covered">cb();</span>
     });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function rmFile(file, done) {</span>
-<span class="cstat-no" title="statement not covered" >    fs.unlink(file, <span class="fstat-no" title="function not covered" >function (err) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (err) {</span>
-<span class="cstat-no" title="statement not covered" >        return onError(err);</span>
+<span class="fstat-no" title="function not covered">  function rmFile(file, done) {</span>
+<span class="cstat-no" title="statement not covered">    fs.unlink(file, <span class="fstat-no" title="function not covered">function (err) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (err) {</span>
+<span class="cstat-no" title="statement not covered">        return onError(err);</span>
       }
-<span class="cstat-no" title="statement not covered" >      return done();</span>
+<span class="cstat-no" title="statement not covered">      return done();</span>
     });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function onDir(dir) {</span>
-<span class="cstat-no" title="statement not covered" >    var target = dir.name.replace(currentPath, targetPath);</span>
-<span class="cstat-no" title="statement not covered" >    isWritable(target, <span class="fstat-no" title="function not covered" >function (writable) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (writable) {</span>
-<span class="cstat-no" title="statement not covered" >        return mkDir(dir, target);</span>
+<span class="fstat-no" title="function not covered">  function onDir(dir) {</span>
+<span class="cstat-no" title="statement not covered">    var target = dir.name.replace(currentPath, targetPath);</span>
+<span class="cstat-no" title="statement not covered">    isWritable(target, <span class="fstat-no" title="function not covered">function (writable) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (writable) {</span>
+<span class="cstat-no" title="statement not covered">        return mkDir(dir, target);</span>
       }
-<span class="cstat-no" title="statement not covered" >      copyDir(dir.name);</span>
+<span class="cstat-no" title="statement not covered">      copyDir(dir.name);</span>
     });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function mkDir(dir, target) {</span>
-<span class="cstat-no" title="statement not covered" >    fs.mkdir(target, dir.mode, <span class="fstat-no" title="function not covered" >function (err) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (err) {</span>
-<span class="cstat-no" title="statement not covered" >        return onError(err);</span>
+<span class="fstat-no" title="function not covered">  function mkDir(dir, target) {</span>
+<span class="cstat-no" title="statement not covered">    fs.mkdir(target, dir.mode, <span class="fstat-no" title="function not covered">function (err) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (err) {</span>
+<span class="cstat-no" title="statement not covered">        return onError(err);</span>
       }
-<span class="cstat-no" title="statement not covered" >      copyDir(dir.name);</span>
+<span class="cstat-no" title="statement not covered">      copyDir(dir.name);</span>
     });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function copyDir(dir) {</span>
-<span class="cstat-no" title="statement not covered" >    fs.readdir(dir, <span class="fstat-no" title="function not covered" >function (err, items) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (err) {</span>
-<span class="cstat-no" title="statement not covered" >        return onError(err);</span>
+<span class="fstat-no" title="function not covered">  function copyDir(dir) {</span>
+<span class="cstat-no" title="statement not covered">    fs.readdir(dir, <span class="fstat-no" title="function not covered">function (err, items) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (err) {</span>
+<span class="cstat-no" title="statement not covered">        return onError(err);</span>
       }
-<span class="cstat-no" title="statement not covered" >      items.forEach(<span class="fstat-no" title="function not covered" >function (item) {</span></span>
-<span class="cstat-no" title="statement not covered" >        startCopy(path.join(dir, item));</span>
+<span class="cstat-no" title="statement not covered">      items.forEach(<span class="fstat-no" title="function not covered">function (item) {</span></span>
+<span class="cstat-no" title="statement not covered">        startCopy(path.join(dir, item));</span>
       });
-<span class="cstat-no" title="statement not covered" >      return cb();</span>
+<span class="cstat-no" title="statement not covered">      return cb();</span>
     });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function onLink(link) {</span>
-<span class="cstat-no" title="statement not covered" >    var target = link.replace(currentPath, targetPath);</span>
-<span class="cstat-no" title="statement not covered" >    fs.readlink(link, <span class="fstat-no" title="function not covered" >function (err, resolvedPath) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (err) {</span>
-<span class="cstat-no" title="statement not covered" >        return onError(err);</span>
+<span class="fstat-no" title="function not covered">  function onLink(link) {</span>
+<span class="cstat-no" title="statement not covered">    var target = link.replace(currentPath, targetPath);</span>
+<span class="cstat-no" title="statement not covered">    fs.readlink(link, <span class="fstat-no" title="function not covered">function (err, resolvedPath) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (err) {</span>
+<span class="cstat-no" title="statement not covered">        return onError(err);</span>
       }
-<span class="cstat-no" title="statement not covered" >      checkLink(resolvedPath, target);</span>
+<span class="cstat-no" title="statement not covered">      checkLink(resolvedPath, target);</span>
     });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function checkLink(resolvedPath, target) {</span>
-<span class="cstat-no" title="statement not covered" >    if (dereference) {</span>
-<span class="cstat-no" title="statement not covered" >      resolvedPath = path.resolve(basePath, resolvedPath);</span>
+<span class="fstat-no" title="function not covered">  function checkLink(resolvedPath, target) {</span>
+<span class="cstat-no" title="statement not covered">    if (dereference) {</span>
+<span class="cstat-no" title="statement not covered">      resolvedPath = path.resolve(basePath, resolvedPath);</span>
     }
-<span class="cstat-no" title="statement not covered" >    isWritable(target, <span class="fstat-no" title="function not covered" >function (writable) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (writable) {</span>
-<span class="cstat-no" title="statement not covered" >        return makeLink(resolvedPath, target);</span>
+<span class="cstat-no" title="statement not covered">    isWritable(target, <span class="fstat-no" title="function not covered">function (writable) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (writable) {</span>
+<span class="cstat-no" title="statement not covered">        return makeLink(resolvedPath, target);</span>
       }
-<span class="cstat-no" title="statement not covered" >      fs.readlink(target, <span class="fstat-no" title="function not covered" >function (err, targetDest) {</span></span>
-<span class="cstat-no" title="statement not covered" >        if (err) {</span>
-<span class="cstat-no" title="statement not covered" >          return onError(err);</span>
+<span class="cstat-no" title="statement not covered">      fs.readlink(target, <span class="fstat-no" title="function not covered">function (err, targetDest) {</span></span>
+<span class="cstat-no" title="statement not covered">        if (err) {</span>
+<span class="cstat-no" title="statement not covered">          return onError(err);</span>
         }
-<span class="cstat-no" title="statement not covered" >        if (dereference) {</span>
-<span class="cstat-no" title="statement not covered" >          targetDest = path.resolve(basePath, targetDest);</span>
+<span class="cstat-no" title="statement not covered">        if (dereference) {</span>
+<span class="cstat-no" title="statement not covered">          targetDest = path.resolve(basePath, targetDest);</span>
         }
-<span class="cstat-no" title="statement not covered" >        if (targetDest === resolvedPath) {</span>
-<span class="cstat-no" title="statement not covered" >          return cb();</span>
+<span class="cstat-no" title="statement not covered">        if (targetDest === resolvedPath) {</span>
+<span class="cstat-no" title="statement not covered">          return cb();</span>
         }
-<span class="cstat-no" title="statement not covered" >        return rmFile(target, <span class="fstat-no" title="function not covered" >function () {</span></span>
-<span class="cstat-no" title="statement not covered" >          makeLink(resolvedPath, target);</span>
+<span class="cstat-no" title="statement not covered">        return rmFile(target, <span class="fstat-no" title="function not covered">function () {</span></span>
+<span class="cstat-no" title="statement not covered">          makeLink(resolvedPath, target);</span>
         });
       });
     });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function makeLink(linkPath, target) {</span>
-<span class="cstat-no" title="statement not covered" >    fs.symlink(linkPath, target, <span class="fstat-no" title="function not covered" >function (err) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (err) {</span>
-<span class="cstat-no" title="statement not covered" >        return onError(err);</span>
+<span class="fstat-no" title="function not covered">  function makeLink(linkPath, target) {</span>
+<span class="cstat-no" title="statement not covered">    fs.symlink(linkPath, target, <span class="fstat-no" title="function not covered">function (err) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (err) {</span>
+<span class="cstat-no" title="statement not covered">        return onError(err);</span>
       }
-<span class="cstat-no" title="statement not covered" >      return cb();</span>
+<span class="cstat-no" title="statement not covered">      return cb();</span>
     });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function isWritable(path, done) {</span>
-<span class="cstat-no" title="statement not covered" >    fs.lstat(path, <span class="fstat-no" title="function not covered" >function (err) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (err) {</span>
-<span class="cstat-no" title="statement not covered" >        if (err.code === 'ENOENT') <span class="cstat-no" title="statement not covered" >return done(true);</span></span>
-<span class="cstat-no" title="statement not covered" >        return done(false);</span>
+<span class="fstat-no" title="function not covered">  function isWritable(path, done) {</span>
+<span class="cstat-no" title="statement not covered">    fs.lstat(path, <span class="fstat-no" title="function not covered">function (err) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (err) {</span>
+<span class="cstat-no" title="statement not covered">        if (err.code === 'ENOENT') <span class="cstat-no" title="statement not covered">return done(true);</span></span>
+<span class="cstat-no" title="statement not covered">        return done(false);</span>
       }
-<span class="cstat-no" title="statement not covered" >      return done(false);</span>
+<span class="cstat-no" title="statement not covered">      return done(false);</span>
     });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function onError(err) {</span>
-<span class="cstat-no" title="statement not covered" >    if (options.stopOnError) {</span>
-<span class="cstat-no" title="statement not covered" >      return cback(err);</span>
+<span class="fstat-no" title="function not covered">  function onError(err) {</span>
+<span class="cstat-no" title="statement not covered">    if (options.stopOnError) {</span>
+<span class="cstat-no" title="statement not covered">      return cback(err);</span>
     }
-    else <span class="cstat-no" title="statement not covered" >if (!errs &amp;&amp; options.errs) {</span>
-<span class="cstat-no" title="statement not covered" >      errs = fs.createWriteStream(options.errs);</span>
+    else <span class="cstat-no" title="statement not covered">if (!errs &amp;&amp; options.errs) {</span>
+<span class="cstat-no" title="statement not covered">      errs = fs.createWriteStream(options.errs);</span>
     }
-    else <span class="cstat-no" title="statement not covered" >if (!errs) {</span>
-<span class="cstat-no" title="statement not covered" >      errs = [];</span>
+    else <span class="cstat-no" title="statement not covered">if (!errs) {</span>
+<span class="cstat-no" title="statement not covered">      errs = [];</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (typeof errs.write === 'undefined') {</span>
-<span class="cstat-no" title="statement not covered" >      errs.push(err);</span>
+<span class="cstat-no" title="statement not covered">    if (typeof errs.write === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered">      errs.push(err);</span>
     }
     else { 
-<span class="cstat-no" title="statement not covered" >      errs.write(err.stack + '\n\n');</span>
+<span class="cstat-no" title="statement not covered">      errs.write(err.stack + '\n\n');</span>
     }
-<span class="cstat-no" title="statement not covered" >    return cb();</span>
+<span class="cstat-no" title="statement not covered">    return cb();</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function cb(skipped) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!skipped) <span class="cstat-no" title="statement not covered" >running--;</span></span>
-<span class="cstat-no" title="statement not covered" >    finished++;</span>
-<span class="cstat-no" title="statement not covered" >    if ((started === finished) &amp;&amp; (running === 0)) {</span>
-<span class="cstat-no" title="statement not covered" >      if (cback !== undefined ) {</span>
-<span class="cstat-no" title="statement not covered" >        return errs ? cback(errs) : cback(null);</span>
+<span class="fstat-no" title="function not covered">  function cb(skipped) {</span>
+<span class="cstat-no" title="statement not covered">    if (!skipped) <span class="cstat-no" title="statement not covered">running--;</span></span>
+<span class="cstat-no" title="statement not covered">    finished++;</span>
+<span class="cstat-no" title="statement not covered">    if ((started === finished) &amp;&amp; (running === 0)) {</span>
+<span class="cstat-no" title="statement not covered">      if (cback !== undefined ) {</span>
+<span class="cstat-no" title="statement not covered">        return errs ? cback(errs) : cback(null);</span>
       }
     }
   }
@@ -1001,10 +999,11 @@ ncp.ncp = ncp;
 &nbsp;
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 11:04:25 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 11:22:16 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
