@@ -1,4 +1,7 @@
-# test coverage for  [ncp (v2.0.0)](https://github.com/AvianFlu/ncp)  [![npm package](https://img.shields.io/npm/v/npmtest-ncp.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-ncp) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-ncp.svg)](https://travis-ci.org/npmtest/node-npmtest-ncp)
+# npmtest-ncp
+
+#### test coverage for  [ncp (v2.0.0)](https://github.com/AvianFlu/ncp)  [![npm package](https://img.shields.io/npm/v/npmtest-ncp.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-ncp) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-ncp.svg)](https://travis-ci.org/npmtest/node-npmtest-ncp)
+
 #### Asynchronous recursive file copy utility.
 
 [![NPM](https://nodei.co/npm/ncp.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ncp)
