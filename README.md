@@ -1,6 +1,6 @@
 # npmtest-ncp
 
-#### test coverage for  [ncp (v2.0.0)](https://github.com/AvianFlu/ncp)  [![npm package](https://img.shields.io/npm/v/npmtest-ncp.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-ncp) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-ncp.svg)](https://travis-ci.org/npmtest/node-npmtest-ncp)
+#### basic test coverage for  [ncp (v2.0.0)](https://github.com/AvianFlu/ncp)  [![npm package](https://img.shields.io/npm/v/npmtest-ncp.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-ncp) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-ncp.svg)](https://travis-ci.org/npmtest/node-npmtest-ncp)
 
 #### Asynchronous recursive file copy utility.
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-ncp/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-ncp/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-ncp/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-ncp/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-ncp/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-ncp/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-ncp/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-ncp/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-ncp/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-ncp/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-ncp/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-ncp/build/coverage.html/index.html)
 
